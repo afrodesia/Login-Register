@@ -17,26 +17,51 @@
 
 
   	<div class="container">
-		
+
 		<div class="row">
-			<div class="col-space col-space--1-of-2">
+			<div class="column column--1-of-2 column--am">
+				<div class="box">
+					<h1>Login & Register</h1>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="row">
+			<div class="column column--1-of-2">
 				<div class="box"></div>
 			</div>
-			<div class="col-space col-space--1-of-2">
+			<div class="column column--1-of-4">
+				<div class="box"></div>
+			</div>
+			<div class="column column--1-of-4">
 				<div class="box"></div>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-space col-space--1-of-2">
+			<div class="column column--1-of-4">
 				<div class="box"></div>
 			</div>
-			<div class="col-space col-space--1-of-2">
+			<div class="column column--1-of-2">
+				<div class="box"></div>
+			</div>
+			<div class="column column--1-of-2">
+				<div class="box"></div>
+			</div>
+			<div class="column column--1-of-3">
 				<div class="box"></div>
 			</div>
 		</div>
 
-		
+		<div class="row">
+			<div class="column column--1-of-2">
+				<div class="box"></div>
+			</div>
+			<div class="column column--1-of-2">
+				<div class="box"></div>
+			</div>
+		</div>
 
   	</div>
 
