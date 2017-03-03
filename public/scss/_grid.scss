@@ -43,7 +43,7 @@
 // Namespaces
 // This stops me from being overzealous with enforcing classes
 $toast-grid-namespace: "row" !default;
-$toast-grid-column-namespace: "space" !default;
+$toast-grid-column-namespace: "col-space" !default;
 
 // $col-groups are the column groups you want
 // For example, $col-groups: (3, 4, 5) will output:

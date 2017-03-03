@@ -1,5 +1,22 @@
 // @import 'myer.reset';
 @import 'grid';
+body{
 
-.container{max-width:1268px; margin:0 auto;}
-.space{background:#ccc;}
+}
+.container{max-width:960px; margin:50px auto;}
+.box{
+	background:#ccc;
+	width:100%;
+	min-height:50px;
+	margin-bottom:20px;
+	&:hover{
+		background:coral;
+	}
+}
+.tall{
+	height:100px;
+
+}
+.tinted{
+	background:lightblue;
+}
