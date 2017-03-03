@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('profile-signup:server');
+var debug = require('debug')('login-register:server');
 var http = require('http');
 
 /**

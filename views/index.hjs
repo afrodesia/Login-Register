@@ -5,7 +5,19 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+  	<div class="container">
     <h1>{{ title }}</h1>
     <p>Welcome to {{ title }}</p>
+    <div class="row">
+    <div class="space space-6-of-12">
+      A half-width column.
+    </div>
+    <div class="space space-6-of-12">
+      A half-width column.
+    </div>
+
+  </div>
+
+  </div>
   </body>
 </html>
