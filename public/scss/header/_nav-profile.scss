@@ -1,0 +1,50 @@
+.nav-profile{
+	position:relative;
+	display:block;
+	float:right;
+	li{
+		float: left;
+		// display: inline-block;
+		
+		a{
+			padding: 17px;
+			display: inline-block;
+			color:#414141;
+			text-decoration: none;
+			cursor: pointer;
+			&:hover{
+				background-color: #d4b9b9;
+				color: #fff;
+				ul.login-drop{
+					display: block;
+				}
+
+			}
+		}
+		// ul.login-drop{
+		// 			position:absolute;
+		// 			border-top:1px solid tomato;
+		// 			left:-226px;
+		// 			display:none;
+		// 			clear:both;
+		// 			width:300px;
+		// 			li{
+		// 				display: block;
+		// 				float: left;
+		// 				width: 100%;
+		// 				a{
+		// 					display: block;
+		// 					float: left;
+		// 					width: 100%;
+		// 				}	
+		// 			}
+		// 		}
+	}
+	
+}
+
+.nav-profile ul > li > ul.login-drop{ display:none }
+.nav-profile ul > li:hover{ display:block }
+
+// @import 'login-drop';
+

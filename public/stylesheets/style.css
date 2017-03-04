@@ -1,4 +1,53 @@
 @charset "UTF-8";
+/* ==========================================================================
+   Responsive images and box padding
+   ========================================================================== */
+img, object {
+  display: block;
+  border: 0;
+  max-width: 100%;
+  height: auto; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-kit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 /*-----------------------------------*
   $TOAST-GRID
 
@@ -309,13 +358,65 @@
 .column--am {
   vertical-align: middle; }
 
+@font-face {
+  font-family: 'Avenir95Custom_Outerline';
+  src: url("../fonts/Avenir/Avenir95Custom_Outerline.eot");
+  src: url("../fonts/Avenir/Avenir95Custom_Outerline.eot") format("embedded-opentype"), url("../fonts/Avenir/Avenir95Custom_Outerline.woff2") format("woff2"), url("../fonts/Avenir/Avenir95Custom_Outerline.woff") format("woff"), url("../fonts/Avenir/Avenir95Custom_Outerline.ttf") format("truetype"), url("../fonts/Avenir/Avenir95Custom_Outerline.svg#Avenir95Custom_Outerline") format("svg"); }
+
+@font-face {
+  font-family: 'AvenirLT45Book';
+  src: url("../fonts/Avenir/AvenirLT45Book.eot");
+  src: url("../fonts/Avenir/AvenirLT45Book.eot") format("embedded-opentype"), url("../fonts/Avenir/AvenirLT45Book.woff2") format("woff2"), url("../fonts/Avenir/AvenirLT45Book.woff") format("woff"), url("../fonts/Avenir/AvenirLT45Book.ttf") format("truetype"), url("../fonts/Avenir/AvenirLT45Book.svg#AvenirLT45Book") format("svg"); }
+
+@font-face {
+  font-family: 'AvenirLT45BookOblique';
+  src: url("../fonts/Avenir/AvenirLT45BookOblique.eot");
+  src: url("../fonts/Avenir/AvenirLT45BookOblique.eot") format("embedded-opentype"), url("../fonts/Avenir/AvenirLT45BookOblique.woff2") format("woff2"), url("../fonts/Avenir/AvenirLT45BookOblique.woff") format("woff"), url("../fonts/Avenir/AvenirLT45BookOblique.ttf") format("truetype"), url("../fonts/Avenir/AvenirLT45BookOblique.svg#AvenirLT45BookOblique") format("svg"); }
+
+@font-face {
+  font-family: 'AvenirLT95Black';
+  src: url("../fonts/Avenir/AvenirLT95Black.eot");
+  src: url("../fonts/Avenir/AvenirLT95Black.eot") format("embedded-opentype"), url("../fonts/Avenir/AvenirLT95Black.woff2") format("woff2"), url("../fonts/Avenir/AvenirLT95Black.woff") format("woff"), url("../fonts/Avenir/AvenirLT95Black.ttf") format("truetype"), url("../fonts/Avenir/AvenirLT95Black.svg#AvenirLT95Black") format("svg"); }
+
+@font-face {
+  font-family: 'AvenirMedium';
+  src: url("../fonts/Avenir/AvenirMedium.eot");
+  src: url("../fonts/Avenir/AvenirMedium.eot") format("embedded-opentype"), url("../fonts/Avenir/AvenirMedium.woff2") format("woff2"), url("../fonts/Avenir/AvenirMedium.woff") format("woff"), url("../fonts/Avenir/AvenirMedium.ttf") format("truetype"), url("../fonts/Avenir/AvenirMedium.svg#AvenirMedium") format("svg"); }
+
+@font-face {
+  font-family: 'AvenirMediumOblique';
+  src: url("../fonts/Avenir/AvenirMediumOblique.eot");
+  src: url("../fonts/Avenir/AvenirMediumOblique.eot") format("embedded-opentype"), url("../fonts/Avenir/AvenirMediumOblique.woff2") format("woff2"), url("../fonts/Avenir/AvenirMediumOblique.woff") format("woff"), url("../fonts/Avenir/AvenirMediumOblique.ttf") format("truetype"), url("../fonts/Avenir/AvenirMediumOblique.svg#AvenirMediumOblique") format("svg"); }
+
+@font-face {
+  font-family: 'AvenirLT65Medium';
+  src: url("../fonts/Avenir/AvenirLT65Medium.eot");
+  src: url("../fonts/Avenir/AvenirLT65Medium.eot") format("embedded-opentype"), url("../fonts/Avenir/AvenirLT65Medium.woff2") format("woff2"), url("../fonts/Avenir/AvenirLT65Medium.woff") format("woff"), url("../fonts/Avenir/AvenirLT65Medium.ttf") format("truetype"), url("../fonts/Avenir/AvenirLT65Medium.svg#AvenirLT65Medium") format("svg"); }
+
+@font-face {
+  font-family: 'AvenirLT65MediumOblique';
+  src: url("../fonts/Avenir/AvenirLT65MediumOblique.eot");
+  src: url("../fonts/Avenir/AvenirLT65MediumOblique.eot") format("embedded-opentype"), url("../fonts/Avenir/AvenirLT65MediumOblique.woff2") format("woff2"), url("../fonts/Avenir/AvenirLT65MediumOblique.woff") format("woff"), url("../fonts/Avenir/AvenirLT65MediumOblique.ttf") format("truetype"), url("../fonts/Avenir/AvenirLT65MediumOblique.svg#AvenirLT65MediumOblique") format("svg"); }
+
+body {
+  font-family: 'AvenirMedium';
+  font-size: 16px;
+  color: #414141; }
+
+h1 {
+  font-family: 'AvenirLT95Black';
+  font-size: 30px;
+  padding-bottom: 10px;
+  letter-spacing: -1px; }
+
 .container {
-  max-width: 960px;
-  margin: 50px auto; }
+  max-width: 1280px;
+  margin: 0px auto; }
 
 .box {
   background: #ccc;
   width: 100%;
+  padding: 20px;
   min-height: 50px;
   margin-bottom: 20px; }
   .box:hover {
@@ -326,3 +427,74 @@
 
 .tinted {
   background: lightblue; }
+
+.Header {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px; }
+  .Header .logo {
+    display: inline-block;
+    float: left;
+    padding-top: 20px; }
+    .Header .logo a {
+      text-decoration: none;
+      color: #333; }
+
+.nav-profile {
+  float: right;
+  display: inline-block;
+  text-decoration: none; }
+  .nav-profile ul > li {
+    float: left; }
+
+.nav-item {
+  height: 49px;
+  position: relative;
+  background: tomato;
+  line-height: 12px;
+  cursor: pointer; }
+  .nav-item:hover, .nav-item:focus {
+    background: #f2f2f2; }
+  .nav-item a:last-child {
+    border-left: 1px solid #ccc; }
+  .nav-item a {
+    padding: 16px 30px;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    height: 49px;
+    display: block; }
+    .nav-item a:hover {
+      color: #333; }
+    .nav-item a:hover:last-child {
+      border-left: 1px solid #ccc; }
+
+.login-drop {
+  position: absolute;
+  top: 49px;
+  background: #f2f2f2;
+  right: 0px;
+  min-width: 320px;
+  max-height: 0;
+  overflow: hidden; }
+
+.login-content {
+  margin-top: 20px;
+  padding: 20px; }
+  .login-content input,
+  .login-content label {
+    width: 100%;
+    display: block; }
+  .login-content label {
+    padding: 0px;
+    margin-bottom: 20px; }
+  .login-content input[type="password"],
+  .login-content input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none !important;
+    padding: 10px; }

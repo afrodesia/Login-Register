@@ -1,0 +1,29 @@
+body{
+	font-family: 'AvenirMedium';
+	font-size:16px;
+	color:#414141;
+}
+h1{
+	font-family: 'AvenirLT95Black';
+	font-size:30px;
+	padding-bottom:10px;
+	letter-spacing:-1px;
+}
+.container{max-width:1280px; margin:0px auto;}
+.box{
+	background:#ccc;
+	width:100%;
+	padding:20px;
+	min-height:50px;
+	margin-bottom:20px;
+	&:hover{
+		background:coral;
+	}
+}
+.tall{
+	height:100px;
+
+}
+.tinted{
+	background:lightblue;
+}

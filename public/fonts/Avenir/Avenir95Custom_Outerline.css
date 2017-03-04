@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Avenir95Custom_Outerline';
+    src: url('fonts/Avenir95Custom_Outerline.eot');
+    src: url('fonts/Avenir95Custom_Outerline.eot') format('embedded-opentype'),
+         url('fonts/Avenir95Custom_Outerline.woff2') format('woff2'),
+         url('fonts/Avenir95Custom_Outerline.woff') format('woff'),
+         url('fonts/Avenir95Custom_Outerline.ttf') format('truetype'),
+         url('fonts/Avenir95Custom_Outerline.svg#Avenir95Custom_Outerline') format('svg');
+}

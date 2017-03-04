@@ -1,0 +1,18 @@
+.Header{
+	display:block;
+	width:100%;
+	height:50px;
+	background-color:#f2f2f2;
+	border-bottom:1px solid #ccc;
+	margin-bottom:50px;
+
+	.logo{
+		display: inline-block;
+		float:left;
+		padding-top: 20px;
+		a{
+			text-decoration: none;
+			color: #333;
+		}
+	}
+}

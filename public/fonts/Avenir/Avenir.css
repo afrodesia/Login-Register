@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Avenir95Custom_Outerline';
+    src: url('fonts/Avenir95Custom_Outerline.eot');
+    src: url('fonts/Avenir95Custom_Outerline.eot') format('embedded-opentype'),
+         url('fonts/Avenir95Custom_Outerline.woff2') format('woff2'),
+         url('fonts/Avenir95Custom_Outerline.woff') format('woff'),
+         url('fonts/Avenir95Custom_Outerline.ttf') format('truetype'),
+         url('fonts/Avenir95Custom_Outerline.svg#Avenir95Custom_Outerline') format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirLT45Book';
+    src: url('fonts/AvenirLT45Book.eot');
+    src: url('fonts/AvenirLT45Book.eot') format('embedded-opentype'),
+         url('fonts/AvenirLT45Book.woff2') format('woff2'),
+         url('fonts/AvenirLT45Book.woff') format('woff'),
+         url('fonts/AvenirLT45Book.ttf') format('truetype'),
+         url('fonts/AvenirLT45Book.svg#AvenirLT45Book') format('svg');
+}
+
+
+@font-face {
+    font-family: 'AvenirLT45BookOblique';
+    src: url('fonts/AvenirLT45BookOblique.eot');
+    src: url('fonts/AvenirLT45BookOblique.eot') format('embedded-opentype'),
+         url('fonts/AvenirLT45BookOblique.woff2') format('woff2'),
+         url('fonts/AvenirLT45BookOblique.woff') format('woff'),
+         url('fonts/AvenirLT45BookOblique.ttf') format('truetype'),
+         url('fonts/AvenirLT45BookOblique.svg#AvenirLT45BookOblique') format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirLT95Black';
+    src: url('fonts/AvenirLT95Black.eot');
+    src: url('fonts/AvenirLT95Black.eot') format('embedded-opentype'),
+         url('fonts/AvenirLT95Black.woff2') format('woff2'),
+         url('fonts/AvenirLT95Black.woff') format('woff'),
+         url('fonts/AvenirLT95Black.ttf') format('truetype'),
+         url('fonts/AvenirLT95Black.svg#AvenirLT95Black') format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirMedium';
+    src: url('fonts/AvenirMedium.eot');
+    src: url('fonts/AvenirMedium.eot') format('embedded-opentype'),
+         url('fonts/AvenirMedium.woff2') format('woff2'),
+         url('fonts/AvenirMedium.woff') format('woff'),
+         url('fonts/AvenirMedium.ttf') format('truetype'),
+         url('fonts/AvenirMedium.svg#AvenirMedium') format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirMediumOblique';
+    src: url('fonts/AvenirMediumOblique.eot');
+    src: url('fonts/AvenirMediumOblique.eot') format('embedded-opentype'),
+         url('fonts/AvenirMediumOblique.woff2') format('woff2'),
+         url('fonts/AvenirMediumOblique.woff') format('woff'),
+         url('fonts/AvenirMediumOblique.ttf') format('truetype'),
+         url('fonts/AvenirMediumOblique.svg#AvenirMediumOblique') format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirLT65Medium';
+    src: url('fonts/AvenirLT65Medium.eot');
+    src: url('fonts/AvenirLT65Medium.eot') format('embedded-opentype'),
+         url('fonts/AvenirLT65Medium.woff2') format('woff2'),
+         url('fonts/AvenirLT65Medium.woff') format('woff'),
+         url('fonts/AvenirLT65Medium.ttf') format('truetype'),
+         url('fonts/AvenirLT65Medium.svg#AvenirLT65Medium') format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirLT65MediumOblique';
+    src: url('fonts/AvenirLT65MediumOblique.eot');
+    src: url('fonts/AvenirLT65MediumOblique.eot') format('embedded-opentype'),
+         url('fonts/AvenirLT65MediumOblique.woff2') format('woff2'),
+         url('fonts/AvenirLT65MediumOblique.woff') format('woff'),
+         url('fonts/AvenirLT65MediumOblique.ttf') format('truetype'),
+         url('fonts/AvenirLT65MediumOblique.svg#AvenirLT65MediumOblique') format('svg');
+}
+
