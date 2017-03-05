@@ -414,7 +414,6 @@ h1 {
   margin: 0px auto; }
 
 .box {
-  background: #ccc;
   width: 100%;
   padding: 20px;
   min-height: 50px;
@@ -437,7 +436,26 @@ h1 {
   border: none;
   border-bottom: 1px solid #fff;
   outline: none !important;
-  padding: 10px; }
+  padding: 10px;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 30px; }
+
+.Form input[type="submit"] {
+  background: coral;
+  border-right: 3px solid #fff;
+  padding: 15px 30px;
+  font-size: 12px;
+  font-family: 'AvenirLT95Black';
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: none;
+  cursor: pointer;
+  border-radius: 6px;
+  display: inline-block;
+  max-width: 130px; }
+  .Form input[type="submit"]:hover {
+    background: tomato; }
 
 .Form output {
   display: block; }

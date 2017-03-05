@@ -1,5 +1,6 @@
 .Form{
 	input,
+
 	input[type="radio"],
 	input[type="checkbox"],
 	input[type="password"],
@@ -9,8 +10,28 @@
 		border-bottom: 1px solid #fff;
 		outline: none !important;
 		padding:10px;
+		font-size:18px;
+		width: 100%;
+		margin-bottom: 30px;
 	}
+	input[type="submit"]{
+		background:coral;
+		border-right:3px solid #fff;
+		padding:15px 30px;
+		font-size: 12px;
+		font-family: 'AvenirLT95Black';
+		text-transform: uppercase;
+		text-align: center;
+		border-bottom:none;
+		cursor: pointer;
+		border-radius:6px;
+		display: inline-block;
+		max-width: 130px;
 
+		&:hover{
+			background:tomato;
+		}
+	}
 	// Range slider
 	output {
   		display: block;
