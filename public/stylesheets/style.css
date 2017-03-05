@@ -428,6 +428,26 @@ h1 {
 .tinted {
   background: lightblue; }
 
+.Form input,
+.Form input[type="radio"],
+.Form input[type="checkbox"],
+.Form input[type="password"],
+.Form input[type="text"] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none !important;
+  padding: 10px; }
+
+.Form output {
+  display: block; }
+
+.Form .rangeslider {
+  background: #333; }
+
+.Form .rangeslider__fill {
+  background: tomato; }
+
 .Header {
   display: block;
   width: 100%;
@@ -443,63 +463,80 @@ h1 {
       text-decoration: none;
       color: #333; }
 
-.nav-profile {
-  float: right;
+.nav-main {
+  height: 50px;
+  float: right; }
+
+nav ul {
+  margin: 0;
+  padding: auto; }
+
+.nav-link {
+  list-style: none;
+  float: left;
+  /*float: left;*/
+  /*gets block elements to slide next to each other*/ }
+
+nav ul li a {
+  text-decoration: none;
   display: inline-block;
+  /*Makes the whole link area clickable (not just text), & allows specification of padding, height, width, margins, etc.*/
+  padding: 14px 43px;
+  /*adds space between links*/
+  color: #333;
+  height: 50px; }
+
+nav ul li .nav-item:hover {
+  background-color: #dbdbdb;
+  color: #fff;
+  font-weight: bold;
+  height: 50px; }
+
+nav ul li .nav-item:active {
   text-decoration: none; }
-  .nav-profile ul > li {
-    float: left; }
+
+/*style the dropdown menus */
+.nav-content {
+  position: absolute;
+  /*this positions the drop menu below the parent element, instead of alongside it*/
+  top: 50px;
+  width: 320px;
+  margin-left: -194px;
+  overflow: hidden;
+  /* just in case any content is larger than the space*/
+  background-color: #dbdbdb;
+  max-height: 0;
+  /*this vanishes the dropdown menus until the user clicks*/ }
+
+.nav-content a:hover {
+  text-decoration: underline; }
+
+.nav-sub {
+  padding: 20px; }
+
+.nav-sub ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+
+.nav-sub ul li a {
+  display: inline-block;
+  /*allows us to add padding*/
+  padding: 5px 0; }
 
 .nav-item {
-  height: 49px;
-  position: relative;
-  background: tomato;
-  line-height: 12px;
-  cursor: pointer; }
-  .nav-item a:last-child {
-    border-left: 1px solid #ccc; }
-  .nav-item a {
-    padding: 16px 30px;
-    color: #fff;
-    text-decoration: none;
-    width: 100%;
-    height: 49px;
-    display: block; }
-    .nav-item a:hover {
-      color: #333; }
-    .nav-item a:hover:last-child {
-      border-left: 1px solid #ccc; }
-  .nav-item .nav-item:focus,
-  .nav-item .nav-item:hover {
-    background: #f2f2f2; }
-  .nav-item .nav-item:focus ~ .login-drop {
-    max-height: 400px; }
-  .nav-item .nav-item:active ~ .login-drop {
-    max-height: 400px; }
+  border-left: 1px solid #ccc; }
 
-.login-drop {
-  position: absolute;
-  top: 49px;
-  background: #f2f2f2;
-  right: 0px;
-  min-width: 320px;
-  max-height: 0;
-  overflow: hidden; }
+.nav-item:last-child {
+  border-right: 1px solid #ccc; }
 
-.login-content {
-  margin-top: 20px;
-  padding: 20px; }
-  .login-content input,
-  .login-content label {
-    width: 100%;
-    display: block; }
-  .login-content label {
-    padding: 0px;
-    margin-bottom: 20px; }
-  .login-content input[type="password"],
-  .login-content input[type="text"] {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #fff;
-    outline: none !important;
-    padding: 10px; }
+.nav-item:focus {
+  background-color: #dbdbdb;
+  border-top: 3px solid tomato; }
+
+.nav-item:focus ~ .nav-content {
+  max-height: 400px;
+  /*displays dropdown menu on click*/
+  -webkit-transition: max-height 0.2s ease-in;
+  -moz-transition: max-height 0.2s ease-in;
+  transition: max-height 0.2s ease-in; }

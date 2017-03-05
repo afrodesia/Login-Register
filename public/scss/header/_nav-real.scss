@@ -3,107 +3,87 @@
 // Adding the "tabindex" parameter to each nav-item took care of it for me.  
 // For example: <a href="#" class="nav-item" tabindex="1">Amazing</a>﻿
 
-body{
-    margin:0px;
-    font:1em 'Cairo', sans-serif;
+.nav-main {
+   height: 50px; 
+   float: right;
 }
- 
-.content {
-    padding:30px;
+
+nav ul {
+   margin: 0;
+   padding: auto;
 }
- 
-.top-nav{
-    background-color:#222;
-    width:100%;
-    color:#fff;
-    height: 70px;
+
+.nav-link {
+   list-style: none; 
+   float: left; /*float: left;*//*gets block elements to slide next to each other*/
 }
- 
-.top-nav .logo {
-    float:left;
-    height:40px;
-    padding:15px 30px;
-    font-size:1.4em;
-    line-height:40px;
+
+nav ul li a {
+   text-decoration: none;
+   display: inline-block; /*Makes the whole link area clickable (not just text), & allows specification of padding, height, width, margins, etc.*/
+   padding: 14px 43px;  /*adds space between links*/
+   color: #333;
+   height: 50px; 
 }
- 
-.top-nav > ul {
-    margin:0px;
-    padding:0px;
-    float:left;
-    list-style:none;
+
+nav ul li .nav-item:hover {
+    background-color: #dbdbdb;
+   color: #fff;
+   font-weight: bold;
+    height: 50px; 
 }
- 
-.top-nav > ul > li {
-    float: left;
+
+nav ul li .nav-item:active {
+
+   text-decoration: none;
 }
+
+/*style the dropdown menus */
+.nav-content {
+   position: absolute; /*this positions the drop menu below the parent element, instead of alongside it*/
+   top: 50px;
+   width:320px;
+    margin-left:-194px;
+   overflow: hidden; /* just in case any content is larger than the space*/
+   background-color: #dbdbdb;
+
+   // COLORS
  
-.nav-item {
-    display:inline-block;
-    padding:15px 20px;
-    line-height:40px;
-    color:#fff;
-    text-decoration:none;
+
+
+   max-height:0; /*this vanishes the dropdown menus until the user clicks*/
 }
- 
-.nav-item:hover {
-    background-color:#444;
+
+.nav-content a:hover {
+   text-decoration:underline;  
 }
- 
+
+.nav-sub {
+   padding: 20px;
+}
+
+.nav-sub ul {
+   padding: 0;
+   margin: 0;
+   list-style-type:none;
+}
+
+.nav-sub ul li a {
+   display:inline-block; /*allows us to add padding*/
+   padding:5px 0;
+}
+.nav-item{
+    border-left:1px solid #ccc;
+}
+.nav-item:last-child{ border-right:1px solid #ccc;}
 .nav-item:focus {
-    background-color:#444;
+    background-color: #dbdbdb;
+    border-top:3px solid tomato;
 }
- 
-.nav-item:focus ~ .dropdown {
-    max-height:400px;
-    -webkit-transition:max-height 0.4s ease-in;
-    -moz-transition:max-height 0.4s ease-in;
-    transition:max-height 0.4s ease-in;
-}
- 
-.dropdown:active {
-  max-height: 400px;
-}
- 
-.dropdown:hover{
-     max-height:400px;
-}
- 
-.dropdown {
-    position:absolute;
-    top: 70px;
-    overflow: hidden;
-    background-color:#222;
-    color:#FFF;
-    max-height:0px;
-}﻿
- 
-.dropdown a {
-    color:#fff;
-    text-decoration:none;
-}
- 
-.dropdown a:hover {
-    color:#DDD;
-}
- 
-.dropdown li {
-    list-style:none;
-}
- 
-.dropdown-content {
-    padding:20px;
-}
- 
-.dropdown-content ul {
-    padding:0;
-    margin:0;
-    list-style-type:none;
-}
- 
-.dropdown-content ul li a {
-    display:inline-block;
-    padding:5px 0px;
-    text-decoration:none;
-    color:#fff;
+
+.nav-item:focus ~ .nav-content {
+   max-height:400px; /*displays dropdown menu on click*/
+   -webkit-transition:max-height 0.2s ease-in;
+   -moz-transition:max-height 0.2s ease-in; 
+        transition:max-height 0.2s ease-in;
 }

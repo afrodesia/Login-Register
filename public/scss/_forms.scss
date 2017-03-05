@@ -10,4 +10,15 @@
 		outline: none !important;
 		padding:10px;
 	}
+
+	// Range slider
+	output {
+  		display: block;
+	}
+	.rangeslider{
+	 	 background:#333;
+	}
+	.rangeslider__fill{
+	 	 background:tomato;
+	}
 }

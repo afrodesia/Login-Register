@@ -21,33 +21,28 @@
 			<div class="logo">
 				<a href="#">Login & Register App</a>
 			</div>
-			<nav class="nav-profile">
-			<ul>
-				<li class="nav-item">
-					<a href="#">Login</a>
-					<div class="login-drop">
-						<div class="login-content">
-							<form>
-								<label>
-								username
-									<input type="text" name="firstname"><br>
-									
-								</label>
-								<label>
-								password
-								<input type="password" name="password">
-								  	
-								</label>
-								<a href="#" value="button">Login</a>
-							</form>
-				
+			  <nav class="nav-main">
+         <ul>
+            
+            <!--About Us-->
+         <li class="nav-link">
+            <a href="#" class="nav-item">Login</a>
+              <div class="nav-content"> 
+                <!--adding this div allows us to give a max height of 0 which means the element won't be shown until user mouse click--> 
+                	<div class="nav-sub">
+   
+               		 </div>
+                </div>
+          </li>
+               
+            <!--Raw Bones & Meat-->
+         <li class="nav-link">
+            <a href="#" class="nav-item">Sign up</a>
+    
+          </li>
 
-						</div>
-					</div>
-				</li>
-				<li class="nav-item"><a href="#">Signup</a></li>
-			</ul>
-			</nav>
+      </ul>
+    </nav>
 		</div>
 	</header>
 
