@@ -16,7 +16,7 @@
 	}
 	input[type="submit"]{
 		background:coral;
-		border-right:3px solid #fff;
+		border-right:3px solid #ccc;
 		padding:15px 30px;
 		font-size: 12px;
 		font-family: 'AvenirLT95Black';
@@ -29,7 +29,8 @@
 		max-width: 130px;
 
 		&:hover{
-			background:tomato;
+			background:#ccc;
+			border-right:3px solid #fff;
 		}
 	}
 	// Range slider

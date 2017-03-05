@@ -53,4 +53,37 @@ router.get('/:resource', function(req, res, next){
 	})
 })
 
+
+router.get('/:resource/:id', function(req, res, next ){
+	var resource = req.params.resource
+	var id = req.params.id
+
+	if (resource === 'profile'){
+		Profile.findById(id, function(err, profile){
+			if(err){
+				res.json({
+					confirmation:'Fail',
+					message: 'Profile not found'
+				})
+				return
+			}
+			if(profile === null){
+				res.json({
+					confirmation: 'Fail',
+					message: 'Profile not found'
+				})
+			}
+			res.json({
+				confirmation:'success',
+				result: profile
+			})
+		})
+		return
+	}
+	res.json({
+		confirmation: 'Fail',
+		message: 'Resource '+resource+' not supported'
+
+	})
+})
 module.exports = router

@@ -443,7 +443,7 @@ h1 {
 
 .Form input[type="submit"] {
   background: coral;
-  border-right: 3px solid #fff;
+  border-right: 3px solid #ccc;
   padding: 15px 30px;
   font-size: 12px;
   font-family: 'AvenirLT95Black';
@@ -455,7 +455,8 @@ h1 {
   display: inline-block;
   max-width: 130px; }
   .Form input[type="submit"]:hover {
-    background: tomato; }
+    background: #ccc;
+    border-right: 3px solid #fff; }
 
 .Form output {
   display: block; }
