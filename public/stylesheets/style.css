@@ -401,7 +401,7 @@ table {
 body {
   font-family: 'AvenirMedium';
   font-size: 16px;
-  color: #414141; }
+  color: #646464; }
 
 h1 {
   font-family: 'AvenirLT95Black';
@@ -418,8 +418,6 @@ h1 {
   padding: 20px;
   min-height: 50px;
   margin-bottom: 20px; }
-  .box:hover {
-    background: coral; }
 
 .tall {
   height: 100px; }
@@ -434,7 +432,7 @@ h1 {
 .Form input[type="text"] {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ccc;
   outline: none !important;
   padding: 10px;
   font-size: 18px;
@@ -554,8 +552,14 @@ nav ul li .nav-item:active {
   border-top: 3px solid tomato; }
 
 .nav-item:focus ~ .nav-content {
-  max-height: 400px;
+  max-height: 270px;
   /*displays dropdown menu on click*/
-  -webkit-transition: max-height 0.2s ease-in;
-  -moz-transition: max-height 0.2s ease-in;
-  transition: max-height 0.2s ease-in; }
+  display: block;
+  z-index: 9999;
+  border-radius: 0px 0px 10px 10px;
+  -webkit-transition: max-height 0.1s ease-in;
+  -moz-transition: max-height 0.1s ease-in;
+  transition: max-height 0.1s ease-in; }
+  .nav-item:focus ~ .nav-content .nav-sub {
+    display: block !important;
+    z-index: 9999; }

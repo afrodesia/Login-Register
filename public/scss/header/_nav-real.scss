@@ -82,8 +82,18 @@ nav ul li .nav-item:active {
 }
 
 .nav-item:focus ~ .nav-content {
-   max-height:400px; /*displays dropdown menu on click*/
-   -webkit-transition:max-height 0.2s ease-in;
-   -moz-transition:max-height 0.2s ease-in; 
-        transition:max-height 0.2s ease-in;
+   max-height:270px; /*displays dropdown menu on click*/
+   display: block;
+    z-index: 9999;
+    border-radius:0px 0px 10px 10px;
+   -webkit-transition:max-height 0.1s ease-in;
+   -moz-transition:max-height 0.1s ease-in; 
+        transition:max-height 0.1s ease-in;
+   .nav-sub{
+
+    display: block !important;
+    z-index: 9999;
+
+   }
 }
+
