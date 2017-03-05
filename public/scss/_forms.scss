@@ -1,0 +1,13 @@
+.Form{
+	input,
+	input[type="radio"],
+	input[type="checkbox"],
+	input[type="password"],
+	input[type="text"]{
+		background:transparent;
+		border:none;
+		border-bottom: 1px solid #fff;
+		outline: none !important;
+		padding:10px;
+	}
+}

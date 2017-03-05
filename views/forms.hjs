@@ -19,7 +19,7 @@
 	<header class="Header">
 		<div class="container">
 			<div class="logo">
-				<a href="#">Login & Register App</a>
+				<a href="#">Login & Register App Forms</a>
 			</div>
 			<nav class="nav-profile">
 			<ul>
@@ -65,12 +65,39 @@
 
 		<div class="row--no-gutter">
 			<div class="column column--1-of-2">
+				<div class="box">
+					<article class="Form">
+						<form>
+							<label>
+								<input type="radio" name="test" />
+								Test Radio
+							</label>
+							
+							<label>
+								<input type="checkbox" name="test" />
+								Test checkbox
+							</label>
+
+							<label>
+								<input type="text" name="test" />
+								Test checkbox
+							</label>
+
+							<label>
+								<input type="password" name="test" />
+								Test checkbox
+							</label>
+
+						</form>
+					</article>
+
+
+				</div>
+			</div>
+			<div class="column column--1-of-2">
 				<div class="box"></div>
 			</div>
-			<div class="column column--1-of-4">
-				<div class="box"></div>
-			</div>
-			<div class="column column--1-of-4">
+			<div class="column column--1-of-3">
 				<div class="box"></div>
 			</div>
 		</div>

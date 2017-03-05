@@ -456,8 +456,6 @@ h1 {
   background: tomato;
   line-height: 12px;
   cursor: pointer; }
-  .nav-item:hover, .nav-item:focus {
-    background: #f2f2f2; }
   .nav-item a:last-child {
     border-left: 1px solid #ccc; }
   .nav-item a {
@@ -471,6 +469,13 @@ h1 {
       color: #333; }
     .nav-item a:hover:last-child {
       border-left: 1px solid #ccc; }
+  .nav-item .nav-item:focus,
+  .nav-item .nav-item:hover {
+    background: #f2f2f2; }
+  .nav-item .nav-item:focus ~ .login-drop {
+    max-height: 400px; }
+  .nav-item .nav-item:active ~ .login-drop {
+    max-height: 400px; }
 
 .login-drop {
   position: absolute;

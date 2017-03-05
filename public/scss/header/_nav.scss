@@ -15,10 +15,7 @@
 	
 	line-height:12px;
 	cursor: pointer;
-	&:hover,
-	&:focus{
-		background:#f2f2f2;
-	}
+
 	a:last-child{border-left:1px solid #ccc;}
 	a{
 		padding:16px 30px;
@@ -36,9 +33,16 @@
 		&:hover:last-child{border-left:1px solid #ccc;}
 		
 	}
-	
-	
-	
+.nav-item:focus,	
+.nav-item:hover{
+	background:#f2f2f2;
+}
+.nav-item:focus ~ .login-drop{
+	max-height: 400px;
+}
+.nav-item:active ~ .login-drop{
+	max-height: 400px;
+}
 }
 .login-drop{
 	position:absolute;

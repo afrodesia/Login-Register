@@ -1,0 +1,109 @@
+// I had to make a small modification to the HTML to get the 
+// :focus pseudo selector to work in my browser (Safari 7.1.3). 
+// Adding the "tabindex" parameter to each nav-item took care of it for me.  
+// For example: <a href="#" class="nav-item" tabindex="1">Amazing</a>﻿
+
+body{
+    margin:0px;
+    font:1em 'Cairo', sans-serif;
+}
+ 
+.content {
+    padding:30px;
+}
+ 
+.top-nav{
+    background-color:#222;
+    width:100%;
+    color:#fff;
+    height: 70px;
+}
+ 
+.top-nav .logo {
+    float:left;
+    height:40px;
+    padding:15px 30px;
+    font-size:1.4em;
+    line-height:40px;
+}
+ 
+.top-nav > ul {
+    margin:0px;
+    padding:0px;
+    float:left;
+    list-style:none;
+}
+ 
+.top-nav > ul > li {
+    float: left;
+}
+ 
+.nav-item {
+    display:inline-block;
+    padding:15px 20px;
+    line-height:40px;
+    color:#fff;
+    text-decoration:none;
+}
+ 
+.nav-item:hover {
+    background-color:#444;
+}
+ 
+.nav-item:focus {
+    background-color:#444;
+}
+ 
+.nav-item:focus ~ .dropdown {
+    max-height:400px;
+    -webkit-transition:max-height 0.4s ease-in;
+    -moz-transition:max-height 0.4s ease-in;
+    transition:max-height 0.4s ease-in;
+}
+ 
+.dropdown:active {
+  max-height: 400px;
+}
+ 
+.dropdown:hover{
+     max-height:400px;
+}
+ 
+.dropdown {
+    position:absolute;
+    top: 70px;
+    overflow: hidden;
+    background-color:#222;
+    color:#FFF;
+    max-height:0px;
+}﻿
+ 
+.dropdown a {
+    color:#fff;
+    text-decoration:none;
+}
+ 
+.dropdown a:hover {
+    color:#DDD;
+}
+ 
+.dropdown li {
+    list-style:none;
+}
+ 
+.dropdown-content {
+    padding:20px;
+}
+ 
+.dropdown-content ul {
+    padding:0;
+    margin:0;
+    list-style-type:none;
+}
+ 
+.dropdown-content ul li a {
+    display:inline-block;
+    padding:5px 0px;
+    text-decoration:none;
+    color:#fff;
+}
