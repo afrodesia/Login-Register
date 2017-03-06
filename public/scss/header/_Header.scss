@@ -9,10 +9,15 @@
 	.logo{
 		display: inline-block;
 		float:left;
-		padding-top: 20px;
+		padding-top: 18px;
 		a{
 			text-decoration: none;
-			color: #333;
+			font-family: 'AvenirLT95Black';
+			color: tomato;
+			cursor: pointer;
+			&:hover{
+				color:#646464;
+			}
 		}
 	}
 }
