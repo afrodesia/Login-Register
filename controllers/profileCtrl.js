@@ -1,4 +1,5 @@
 var Profile = require('../models/Profile')
+var Promise =  require('bluebird')
 
 module.exports = {
 	get: function(params){
@@ -15,12 +16,12 @@ module.exports = {
 	},
 	getById: function(id){
 		return new Promise(function(resolve, reject){
-			Promise.getById(id, function(err, profile){
+			Profile.findById(id, function(err, profile){
 				if(err){
 					reject(err)
 					return
 				}
-				if(profile === newll){
+				if(profile === null){
 					reject(new Error('Profile No Found'))
 					return
 				}

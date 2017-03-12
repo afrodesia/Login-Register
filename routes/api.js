@@ -25,7 +25,7 @@ router.post('/:resource', function(req, res, next){
 				message: err
 			})
 		})
-		
+
 		//  DIRTY CALLBACK WAY
 
 		// Profile.create(formData, function(err, profile){
@@ -99,16 +99,16 @@ router.get('/:resource/:id', function(req, res, next ){
 		// PROMISE WAY 
 		controllers.profile
 		.getById(id)
-		.then(function(){
+		.then(function(result){
 			res.json({
 				confirmation: 'Success',
 				result: result
 			})
 		})
-		.catch(function(){
+		.catch(function(err){
 			res.json({
 				confirmation: 'Fail',
-				message: err
+				message: err.message
 			})
 		})
 
