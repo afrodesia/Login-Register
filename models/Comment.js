@@ -7,7 +7,8 @@ var CommentSchema = new mongoose.Schema({
 
 CommentSchema.methods.summary = function(){
 	var summary = {
-		id: this._id.toString(),
+		// id: this._id.toString(),
+		id: this.id.toString(),
 		profile: this.profile,
 		text: this.text,
 		timestamp: this.timestamp,

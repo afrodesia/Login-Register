@@ -9,4 +9,8 @@ router.get('/', function(req, res, next) {
 router.get('/forms', function(req, res, next) {
   res.render('forms', { title: 'Login Forms - ' });
 });
+/* GET home page. */
+router.get('/profile', function(req, res, next) {
+  res.render('profile', { title: 'Login Profile - ' });
+});
 module.exports = router;

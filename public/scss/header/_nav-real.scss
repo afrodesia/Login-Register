@@ -16,6 +16,14 @@ nav ul {
 .nav-link {
    list-style: none; 
    float: left; /*float: left;*//*gets block elements to slide next to each other*/
+
+  .profile-pic{
+    padding-top:3px;
+    padding-left:10px;
+    span > img{
+      border-radius:50px;
+    }
+}
 }
 
 nav ul li a {
@@ -96,4 +104,6 @@ nav ul li .nav-item:active {
 
    }
 }
+
+
 
