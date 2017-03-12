@@ -11,7 +11,7 @@ ProfileSchema.methods.summary = function(){
 		id: this._id.toString(),
 		email: this.email,
 		username: this.username,
-		timestamp: this.timestamp,
+		timestamp: this.timestamp
 	}
 	return summary
 }
