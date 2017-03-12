@@ -29,7 +29,7 @@ module.exports = {
 					reject(new Error('Profile No Found'))
 					return
 				}
-				resolve(profile)
+				resolve(profile.summary())
 			})
 		})
 	},
@@ -40,7 +40,7 @@ module.exports = {
 					reject(err)
 					return
 				}
-				resolve(profile)
+				resolve(profile.summary())
 			})
 		})
 	}

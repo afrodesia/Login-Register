@@ -10,7 +10,11 @@ module.exports = {
 					reject(err)
 					return
 				}
-				resolve(comments)
+				var results = []
+				comments.forEach(function(comment, i){
+					results.push(comment.summary())
+				})
+				resolve(results)
 			})
 		})
 	},
@@ -25,7 +29,7 @@ module.exports = {
 					reject(new Error('Comment No Found'))
 					return
 				}
-				resolve(comment)
+				resolve(comment.summary())
 			})
 		})
 	},
@@ -36,7 +40,7 @@ module.exports = {
 					reject(err)
 					return
 				}
-				resolve(comment)
+				resolve(comment.summary())
 			})
 		})
 	}
