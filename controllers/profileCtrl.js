@@ -18,7 +18,7 @@ module.exports = {
 		return new Promise(function(resolve, reject){
 			Profile.findById(id, function(err, profile){
 				if(err){
-					reject(err)
+					reject(new Error('Profile No Found'))
 					return
 				}
 				if(profile === null){
