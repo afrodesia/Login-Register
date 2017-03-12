@@ -9,19 +9,38 @@ router.post('/:resource', function(req, res, next){
 	if(resource === 'profile'){
 
 		var formData = req.body
-		Profile.create(formData, function(err, profile){
-			if(err){
-				res.json({
-					confirmation: 'fail',
-					message: err
-				})
-				return
-			}
+		// PROMISE WAY
+
+		controllers.profile
+		.post(formData)
+		.then(function(result){
 			res.json({
-				confirmation: 'success',
-				result: profile
+				confirmation: 'Success',
+				result: result
 			})
 		})
+		.catch(function(err){
+			res.json({
+				confirmation: 'Fail',
+				message: err
+			})
+		})
+		
+		//  DIRTY CALLBACK WAY
+
+		// Profile.create(formData, function(err, profile){
+		// 	if(err){
+		// 		res.json({
+		// 			confirmation: 'fail',
+		// 			message: err
+		// 		})
+		// 		return
+		// 	}
+		// 	res.json({
+		// 		confirmation: 'success',
+		// 		result: profile
+		// 	})
+		// })
 		return
 	}
 	res.json({
@@ -32,7 +51,7 @@ router.post('/:resource', function(req, res, next){
 router.get('/:resource', function(req, res, next){
 	var resource = req.params.resource
 	if(resource === 'profile'){
-		// Promise Version
+		// PROMISE WAY
 		controllers.profile.get(null)
 		.then(function(results){
 			res.json({
@@ -46,6 +65,8 @@ router.get('/:resource', function(req, res, next){
 				message: err
 			})
 		})
+		//  DIRTY CALLBACK WAY
+
 		// Profile.find(null, function(err, profiles){
 
 		// 	if(err){
@@ -74,25 +95,44 @@ router.get('/:resource/:id', function(req, res, next ){
 	var id = req.params.id
 
 	if (resource === 'profile'){
-		Profile.findById(id, function(err, profile){
-			if(err){
-				res.json({
-					confirmation:'Fail',
-					message: 'Profile not found'
-				})
-				return
-			}
-			if(profile === null){
-				res.json({
-					confirmation: 'Fail',
-					message: 'Profile not found'
-				})
-			}
+
+		// PROMISE WAY 
+		controllers.profile
+		.getById(id)
+		.then(function(){
 			res.json({
-				confirmation:'success',
-				result: profile
+				confirmation: 'Success',
+				result: result
 			})
 		})
+		.catch(function(){
+			res.json({
+				confirmation: 'Fail',
+				message: err
+			})
+		})
+
+		//  DIRTY CALLBACK WAY
+
+		// Profile.findById(id, function(err, profile){
+		// 	if(err){
+		// 		res.json({
+		// 			confirmation:'Fail',
+		// 			message: 'Profile not found'
+		// 		})
+		// 		return
+		// 	}
+		// 	if(profile === null){
+		// 		res.json({
+		// 			confirmation: 'Fail',
+		// 			message: 'Profile not found'
+		// 		})
+		// 	}
+		// 	res.json({
+		// 		confirmation:'success',
+		// 		result: profile
+		// 	})
+		// })
 		return
 	}
 	res.json({
