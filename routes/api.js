@@ -1,144 +1,91 @@
 var express = require('express')
 var router = express.Router()
-var Profile = require('../models/Profile')
+
 var controllers = require('../controllers')
 
 router.post('/:resource', function(req, res, next){
 	var resource = req.params.resource
+	var controller = controllers[resource]
 
-	if(resource === 'profile'){
-
-		var formData = req.body
-		// PROMISE WAY
-
-		controllers.profile
-		.post(formData)
-		.then(function(result){
-			res.json({
-				confirmation: 'Success',
-				result: result
-			})
+	if(controller === null){
+		res.json({
+			confirmation: 'Failed',
+			message: 'Resource '+resource+' not supported..'
 		})
-		.catch(function(err){
-			res.json({
-				confirmation: 'Fail',
-				message: err
-			})
-		})
-
-		//  DIRTY CALLBACK WAY
-
-		// Profile.create(formData, function(err, profile){
-		// 	if(err){
-		// 		res.json({
-		// 			confirmation: 'fail',
-		// 			message: err
-		// 		})
-		// 		return
-		// 	}
-		// 	res.json({
-		// 		confirmation: 'success',
-		// 		result: profile
-		// 	})
-		// })
 		return
 	}
-	res.json({
-		confirmation: 'fail',
-		message: 'Resource '+resource+' not supported..'
+	var formData = req.body
+
+	controller
+	.post(formData)
+	.then(function(result){
+		res.json({
+			confirmation: 'Success',
+			result: result
+		})
+	})
+	.catch(function(err){
+		res.json({
+			confirmation: 'Failed',
+			message: err
+		})
 	})
 })
+
 router.get('/:resource', function(req, res, next){
 	var resource = req.params.resource
-	if(resource === 'profile'){
-		// PROMISE WAY
-		controllers.profile.get(null)
-		.then(function(results){
-			res.json({
-				confirmation: 'Sucess',
-				results: results
-			})
-		})
-		.catch(function(err){
-			res.json({
-				confirmation: 'Failed',
-				message: err
-			})
-		})
-		//  DIRTY CALLBACK WAY
+	var controller = controllers[resource]
 
-		// Profile.find(null, function(err, profiles){
-
-		// 	if(err){
-		// 		res.json({
-		// 			confirmation: 'Failed',
-		// 			message: err
-		// 		})
-		// 		retur
-		// 	}
-		// 	res.json({
-		// 		confirmation : ('success'),
-		// 		results : profiles
-		// 	})
-		// })
-		return	
+	if (controller === null){
+		res.json({
+			confirmation:'Failed',
+			message: 'Resource '+resource+' not suported..'
+		})
+		return
 	}
-	res.json({
-		confirmation:'fail',
-		message: 'Resource '+resource+' not suported..'
+	controller
+	.get(null)
+	.then(function(results){
+		res.json({
+			confirmation: 'Success',
+			results: results
+		})
 	})
+	.catch(function(err){
+		res.json({
+			confirmation: 'Failed',
+			message: err
+		})
+	})	
 })
 
 
 router.get('/:resource/:id', function(req, res, next ){
 	var resource = req.params.resource
-	var id = req.params.id
+	var controller = controllers[resource]
 
-	if (resource === 'profile'){
-
-		// PROMISE WAY 
-		controllers.profile
-		.getById(id)
-		.then(function(result){
-			res.json({
-				confirmation: 'Success',
-				result: result
-			})
+	if (controller === null){
+		res.json({
+			confirmation:'Failed',
+			message: 'Resource '+resource+' not suported..'
 		})
-		.catch(function(err){
-			res.json({
-				confirmation: 'Fail',
-				message: err.message
-			})
-		})
-
-		//  DIRTY CALLBACK WAY
-
-		// Profile.findById(id, function(err, profile){
-		// 	if(err){
-		// 		res.json({
-		// 			confirmation:'Fail',
-		// 			message: 'Profile not found'
-		// 		})
-		// 		return
-		// 	}
-		// 	if(profile === null){
-		// 		res.json({
-		// 			confirmation: 'Fail',
-		// 			message: 'Profile not found'
-		// 		})
-		// 	}
-		// 	res.json({
-		// 		confirmation:'success',
-		// 		result: profile
-		// 	})
-		// })
 		return
 	}
-	res.json({
-		confirmation: 'Fail',
-		message: 'Resource '+resource+' not supported'
-
+	var id = req.params.id
+	controller
+	.getById(id)
+	.then(function(result){
+		res.json({
+			confirmation: 'Success',
+			result: result
+		})
+	})
+	.catch(function(err){
+		res.json({
+			confirmation: 'Failed',
+			message: err.message
+		})
 	})
 })
+
 module.exports = router
