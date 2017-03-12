@@ -10,7 +10,11 @@ module.exports = {
 					reject(err)
 					return
 				}
-				resolve(profiles)
+				var results = []
+				profiles.forEach(function(profile, i){
+					results.push(profile.summary())
+				})
+				resolve(results)
 			})
 		})
 	},
