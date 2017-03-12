@@ -108,7 +108,18 @@
   	</div>
 
 
+ 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 	<script type="text/javascript" src="javascripts/vendor/modernizr-custom.js"></script>
 
+
+	<script type="text/javascript">
+		(function(){
+			$('a.nav-item').on('hover', function(){
+				$('.nav-content').show()
+			})
+		})()
+
+	</script>
   </body>
 </html>

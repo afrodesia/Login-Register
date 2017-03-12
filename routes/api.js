@@ -1,6 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var Profile = require('../models/Profile')
+var controllers = require('../controllers')
 
 router.post('/:resource', function(req, res, next){
 	var resource = req.params.resource
@@ -31,20 +32,34 @@ router.post('/:resource', function(req, res, next){
 router.get('/:resource', function(req, res, next){
 	var resource = req.params.resource
 	if(resource === 'profile'){
-		Profile.find(null, function(err, profiles){
-
-			if(err){
-				res.json({
-					confirmation: 'Failed',
-					message: err
-				})
-				retur
-			}
+		// Promise Version
+		controllers.profile.get(null)
+		.then(function(results){
 			res.json({
-				confirmation : ('success'),
-				results : profiles
+				confirmation: 'Sucess',
+				results: results
 			})
 		})
+		.catch(function(err){
+			res.json({
+				confirmation: 'Failed',
+				message: err
+			})
+		})
+		// Profile.find(null, function(err, profiles){
+
+		// 	if(err){
+		// 		res.json({
+		// 			confirmation: 'Failed',
+		// 			message: err
+		// 		})
+		// 		retur
+		// 	}
+		// 	res.json({
+		// 		confirmation : ('success'),
+		// 		results : profiles
+		// 	})
+		// })
 		return	
 	}
 	res.json({
