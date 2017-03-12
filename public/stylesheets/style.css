@@ -425,6 +425,18 @@ h1 {
 .tinted {
   background: lightblue; }
 
+.Form textarea {
+  border: 1px solid #ccc;
+  background: transparent;
+  min-height: 150px;
+  width: 100%;
+  padding: 0px;
+  text-align: left !important;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px; }
+
 .Form input,
 .Form input[type="radio"],
 .Form input[type="checkbox"],
