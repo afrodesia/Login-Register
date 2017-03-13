@@ -466,9 +466,11 @@ h3 {
   width: 100%;
   margin-bottom: 30px; }
 
+.Form button[type="submit"],
 .Form a[type="submit"],
 .Form input[type="submit"] {
   background: coral;
+  border: 0px;
   border-right: 3px solid #ccc;
   padding: 15px 30px;
   font-size: 12px;
@@ -481,6 +483,7 @@ h3 {
   display: inline-block;
   max-width: 130px;
   margin-bottom: 5px; }
+  .Form button[type="submit"]:hover,
   .Form a[type="submit"]:hover,
   .Form input[type="submit"]:hover {
     background: #ccc;

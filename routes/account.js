@@ -15,4 +15,23 @@ router.post('/register', function(req, res, next){
 	})
 })
 
+
+router.post('/login', function(req, res, next){
+	var formData = req.body
+	controllers.profile
+	.get({email: formData.email})
+	.then(function(profile){
+		res.json({
+			confirmation:'Success',
+			profile: profile
+		})
+	})	
+	.catch(function(err){
+		res.json({
+			confirmation:'Failed',
+			message: err
+		})
+	})
+})
+
 module.exports = router

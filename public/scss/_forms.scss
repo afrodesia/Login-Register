@@ -35,9 +35,11 @@
 		width: 100%;
 		margin-bottom: 30px;
 	}
+	button[type="submit"],
 	a[type="submit"],
 	input[type="submit"]{
 		background:coral;
+		border:0px;
 		border-right:3px solid #ccc;
 		padding:15px 30px;
 		font-size: 12px;

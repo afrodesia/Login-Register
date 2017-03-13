@@ -70,12 +70,12 @@
 
 			<div class="column column--1-of-3" >
 				<div class="box" style="background: #f2f2f2;">
-					<form action="/api/profile" method="post" class="Form">
+					<form action="/account/login" method="post" class="Form">
    							<fieldset>
    							<h3>Login</h3>
 	   							<input type="text" name="email" placeholder="Email" />
 	   							<input type="password" name="password" placeholder="Password" />
-	   							<a type="submit" name="submit">Login</a>
+	   							<button type="submit" name="submit">Login</button>
    							</fieldset>
    						</form>
 				</div>
