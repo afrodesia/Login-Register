@@ -26,14 +26,16 @@
             
             <!--About Us-->
          <li class="nav-link">
-            <a href="#" class="nav-item">Login</a>
-              <div class="nav-content"> 
+            <a href="#" class="nav-item" id="loginButton">Login</a>
+              <div class="nav-content" id="loginBox"> 
                 <!--adding this div allows us to give a max height of 0 which means the element won't be shown until user mouse click--> 
-                	<div class="nav-sub">
+                	<div class="nav-sub" id="loginForm">
    						<form action="/api/profile" method="post" class="Form">
-   							<input type="text" name="email" placeholder="Email" />
-   							<input type="password" name="password" placeholder="Password" />
-   							<input type="submit" name="submit" placeholder="Submit" />
+   							<fieldset>
+	   							<input type="text" name="email" placeholder="Email" />
+	   							<input type="password" name="password" placeholder="Password" />
+	   							<input type="submit" name="submit" placeholder="Submit" />
+   							</fieldset>
    						</form>
                		 </div>
                 </div>
@@ -51,26 +53,40 @@
 	</header>
 
   	<div class="container">
-
+		
 		<div class="row">
 			<div class="column column--1-of-2 column--am">
 				<div class="box hard-grey">
-					<h1>Login & Register</h1>
+					<h1>Join Now!</h1>
 					<p>We start building out the actual UI components to support a search bar and results page. The search component, called Nav.js will include a text field where the user enters a zip code. The results component, called Venues.js will render the actual search results from the Foursquare API.</p>
-				</div>
-			</div>
-			
-		</div>
-
-		<div class="row">
-			<div class="column column--1-of-2">
-				<div class="box">
 					<form action="/account/register" method="post" class="Form">
    							<input type="text" name="email" placeholder="Email" />
    							<input type="text" name="username" placeholder="Username" />
    							<input type="password" name="password" placeholder="Password" />
    							<input type="submit" name="submit" placeholder="Submit" />
+   					</form>
+				</div>
+			</div>
+
+			<div class="column column--1-of-3" >
+				<div class="box" style="background: #f2f2f2;">
+					<form action="/api/profile" method="post" class="Form">
+   							<fieldset>
+   							<h3>Login</h3>
+	   							<input type="text" name="email" placeholder="Email" />
+	   							<input type="password" name="password" placeholder="Password" />
+	   							<a type="submit" name="submit">Login</a>
+   							</fieldset>
    						</form>
+				</div>
+			</div>
+			
+		</div>
+{{! 
+		<div class="row">
+			<div class="column column--1-of-2">
+				<div class="box">
+					
 				</div>
 			</div>
 			<div class="column column--1-of-2">
@@ -89,11 +105,13 @@
 			<div class="column column--1-of-4">
 				<div class="box"></div>
 			</div>
-		</div>
+		</div> }}
 
-		<div class="row">
-			<div class="column column--1-of-4">
-				<div class="box"></div>
+{{! 		<div class="row">
+			<div class="column column--1-of-4" >
+				<div class="box">
+				
+				</div>
 			</div>
 			<div class="column column--1-of-2">
 				<div class="box"></div>
@@ -113,7 +131,7 @@
 			<div class="column column--1-of-2">
 				<div class="box"></div>
 			</div>
-		</div>
+		</div> }}
 
   	</div>
 
@@ -121,15 +139,8 @@
  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="javascripts/vendor/modernizr-custom.js"></script>
+	<script type="text/javascript" src="javascripts/login-box.js"></script>
 
-
-	<script type="text/javascript">
-		(function(){
-			$('a.nav-item').on('hover', function(){
-				$('.nav-content').show()
-			})
-		})()
-
-	</script>
+	
   </body>
 </html>

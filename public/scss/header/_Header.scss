@@ -10,6 +10,7 @@
 		display: inline-block;
 		float:left;
 		padding-top: 18px;
+		padding-left:20px;
 		a{
 			text-decoration: none;
 			font-family: 'AvenirLT95Black';
@@ -19,5 +20,10 @@
 				color:#646464;
 			}
 		}
+	}
+}
+@media (max-width: 768px) {
+  	Header{
+		margin-bottom:20px !important;
 	}
 }

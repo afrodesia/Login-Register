@@ -409,6 +409,11 @@ h1 {
   padding-bottom: 10px;
   letter-spacing: -1px; }
 
+h3 {
+  font-family: 'AvenirLT95Black';
+  padding-bottom: 15px;
+  padding-left: 5px; }
+
 .container {
   max-width: 1280px;
   margin: 0px auto; }
@@ -425,6 +430,12 @@ h1 {
 .tinted {
   background: lightblue; }
 
+.Form h3 {
+  border-bottom: 1px solid tomato;
+  margin-bottom: 20px;
+  color: tomato;
+  font-size: 18px; }
+
 .Form textarea {
   border: 1px solid #ccc;
   background: transparent;
@@ -438,6 +449,10 @@ h1 {
   margin-bottom: 20px; }
 
 .Form input,
+.Form a[type="radio"],
+.Form a[type="checkbox"],
+.Form a[type="password"],
+.Form a[type="text"],
 .Form input[type="radio"],
 .Form input[type="checkbox"],
 .Form input[type="password"],
@@ -451,6 +466,7 @@ h1 {
   width: 100%;
   margin-bottom: 30px; }
 
+.Form a[type="submit"],
 .Form input[type="submit"] {
   background: coral;
   border-right: 3px solid #ccc;
@@ -463,7 +479,9 @@ h1 {
   cursor: pointer;
   border-radius: 6px;
   display: inline-block;
-  max-width: 130px; }
+  max-width: 130px;
+  margin-bottom: 5px; }
+  .Form a[type="submit"]:hover,
   .Form input[type="submit"]:hover {
     background: #ccc;
     border-right: 3px solid #fff; }
@@ -487,7 +505,8 @@ h1 {
   .Header .logo {
     display: inline-block;
     float: left;
-    padding-top: 18px; }
+    padding-top: 18px;
+    padding-left: 20px; }
     .Header .logo a {
       text-decoration: none;
       font-family: 'AvenirLT95Black';
@@ -495,6 +514,10 @@ h1 {
       cursor: pointer; }
       .Header .logo a:hover {
         color: #646464; }
+
+@media (max-width: 768px) {
+  Header {
+    margin-bottom: 20px !important; } }
 
 .nav-main {
   height: 50px;
@@ -558,9 +581,10 @@ nav ul li .nav-item:active {
 
 /*style the dropdown menus */
 .nav-content {
-  position: absolute;
+  position: static;
   /*this positions the drop menu below the parent element, instead of alongside it*/
   top: 50px;
+  float: none;
   width: 320px;
   margin-left: -194px;
   overflow: hidden;
