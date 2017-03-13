@@ -65,7 +65,7 @@
 		<div class="row">
 			<div class="column column--1-of-2">
 				<div class="box">
-					<form action="/api/profile" method="post" class="Form">
+					<form action="/account/register" method="post" class="Form">
    							<input type="text" name="email" placeholder="Email" />
    							<input type="text" name="username" placeholder="Username" />
    							<input type="password" name="password" placeholder="Password" />

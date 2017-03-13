@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var controllers = require('../controllers')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -11,6 +12,6 @@ router.get('/forms', function(req, res, next) {
 });
 /* GET home page. */
 router.get('/profile', function(req, res, next) {
-  res.render('profile', { title: 'Login Profile - ' });
+  res.render('profile', null);
 });
 module.exports = router;

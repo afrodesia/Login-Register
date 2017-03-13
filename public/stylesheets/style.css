@@ -509,11 +509,33 @@ nav ul {
   float: left;
   /*float: left;*/
   /*gets block elements to slide next to each other*/ }
-  .nav-link .profile-pic {
+
+.profile {
+  background-color: tomato;
+  height: 50px;
+  min-width: 150px; }
+  .profile .profile-pic {
     padding-top: 3px;
     padding-left: 10px; }
-    .nav-link .profile-pic span > img {
+    .profile .profile-pic .profile-bg {
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      display: inline-block; }
+    .profile .profile-pic .profile-bg > img {
       border-radius: 50px; }
+    .profile .profile-pic .profile-name {
+      color: #fff;
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 10px;
+      line-height: 20px;
+      margin-top: -30px;
+      font-family: 'AvenirMediumOblique';
+      font-size: 12px;
+      cursor: pointer; }
+      .profile .profile-pic .profile-name :hover {
+        color: red; }
 
 nav ul li a {
   text-decoration: none;
