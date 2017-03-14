@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var controllers = require('../controllers')
+var bcrypt = require('bcryptjs')
 
 router.post('/register', function(req, res, next){
 	var formData = req.body
@@ -39,9 +40,9 @@ router.get('/currentuser', function(req, res, next){
 router.post('/login', function(req, res, next){
 	var formData = req.body
 	controllers.profile
-	.get({email: formData.email})
+	.get({email: formData.email}, true)
 	.then(function(profiles){
-		var profile = profiles[0]
+
 		if(profiles.length === 0){
 			res.json({
 				confirmation:'Failed',
@@ -49,8 +50,19 @@ router.post('/login', function(req, res, next){
 			})
 			return
 		}
+		var profile = profiles[0]
 
-		req.session.user = profile.id
+		var passwordCorrect = bcrypt.compareSync(formData.password, profile.password)
+		if(passwordCorrect === false){
+			req.session.reset()
+			res.json({
+				confirmation: 'Failed',
+				message: 'Wrong Password!'
+			})
+			return
+		}
+		// attach session
+		req.session.user = profile._id.toString()
 		res.redirect('/profile')
 
 	})	
