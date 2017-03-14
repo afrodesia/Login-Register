@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var controllers = require('../controllers')
 var bcrypt = require('bcryptjs')
+var jwt = require('jsonwebtoken')
 
 router.post('/register', function(req, res, next){
 	var formData = req.body
@@ -24,17 +25,30 @@ router.get('/currentuser', function(req, res, next){
 		})
 		return
 	}
-	if (req.session.user === null){
+	if (req.session.token === null){
 		res.json({
 			confirmation: 'Success',
 			user: null
 		})
 		return
 	}
-	res.json({
-		confirmation: 'Success',
-		user: req.session.user
+	jwt.verify(req.session.token,'1234', function(err, decode){
+		if(err){
+			res.json({
+				confirmation: 'Failed',
+				message: 'Token is Invalid!'
+			})
+			return
+		}
+		res.json({
+			confirmation: 'Success',
+			token: decode
+		})
 	})
+	// res.json({
+	// 	confirmation: 'Success',
+	// 	user: req.session.user
+	// })
 })
 
 router.post('/login', function(req, res, next){
@@ -61,8 +75,8 @@ router.post('/login', function(req, res, next){
 			})
 			return
 		}
-		// attach session
-		req.session.user = profile._id.toString()
+		req.session.user = profile._id.toString() // attach session
+		req.session.token = jwt.sign({id: profile._id.toString()}, '1234', {expiresIn:4000})
 		res.redirect('/profile')
 
 	})	
