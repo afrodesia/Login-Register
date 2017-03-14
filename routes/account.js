@@ -9,7 +9,7 @@ router.post('/register', function(req, res, next){
 	controllers.profile
 	.post(formData)
 	.then(function(profile){
-		req.session.token = jwt.sign({id: profile.id}, '1234', {expiresIn:4000})
+		req.session.token = jwt.sign({id: profile.id}, process.env.TOKEN_SECRET, {expiresIn:4000})
 		res.redirect('/profile')
 		return
 	})	
@@ -41,7 +41,7 @@ router.get('/currentuser', function(req, res, next){
 		})
 		return
 	}
-	jwt.verify(req.session.token,'1234', function(err, decode){
+	jwt.verify(req.session.token, process.env.TOKEN_SECRET, function(err, decode){
 		if(err){
 			res.json({
 				confirmation: 'Failed',
@@ -92,7 +92,7 @@ router.post('/login', function(req, res, next){
 			return
 		}
 		req.session.user = profile._id.toString() // attach session
-		req.session.token = jwt.sign({id: profile._id.toString()}, '1234', {expiresIn:4000})
+		req.session.token = jwt.sign({id: profile._id.toString()}, process.env.TOKEN_SECRET, {expiresIn:4000})
 		res.redirect('/profile')
 
 	})	

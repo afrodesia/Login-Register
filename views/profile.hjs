@@ -50,7 +50,7 @@
 				<span class="profile-bg">
 					
 				</span>
-				<span class="profile-name">Hello, {{ username }}</span>
+				<span class="profile-name">Hello, {{ username }} </span>
 			</div>
     
           </li>
@@ -66,7 +66,7 @@
 			<div class="column column--1-of-2 column--am">
 				<div class="box hard-grey">
 					<h1>Profile</h1>
-					<p>Welcome {{ username }}</p>
+					<p>Welcome <span class="tomato">{{ username }} </span>to your personal profile section. Feel free to leave a comment.</p>
 				</div>
 			</div>
 			

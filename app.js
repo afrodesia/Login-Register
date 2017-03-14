@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var sessions = require('client-sessions');
+require('dotenv').config()
 
 var dbUrl = 'mongodb://localhost/profile-signup'
 mongoose.connect(dbUrl, function(err, res){

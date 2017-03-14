@@ -22,7 +22,7 @@ router.get('/profile', function(req, res, next) {
 		return
 
 	}
-  	jwt.verify(req.session.token,'1234', function(err, decode){
+  	jwt.verify(req.session.token, process.env.TOKEN_SECRET, function(err, decode){
 		if(err){
 			res.render('profile', null)
 			return
