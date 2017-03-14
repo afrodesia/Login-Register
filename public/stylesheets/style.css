@@ -584,10 +584,11 @@ nav ul li .nav-item:active {
 
 /*style the dropdown menus */
 .nav-content {
-  position: static;
+  position: absolute;
   /*this positions the drop menu below the parent element, instead of alongside it*/
   top: 50px;
   float: none;
+  z-index: 99;
   width: 320px;
   margin-left: -194px;
   overflow: hidden;

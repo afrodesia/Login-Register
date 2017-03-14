@@ -15,16 +15,44 @@ router.post('/register', function(req, res, next){
 	})
 })
 
+router.get('/currentuser', function(req, res, next){
+	if (req.session === null){
+		res.json({
+			confirmation: 'Success',
+			user: null
+		})
+		return
+	}
+	if (req.session.user === null){
+		res.json({
+			confirmation: 'Success',
+			user: null
+		})
+		return
+	}
+	res.json({
+		confirmation: 'Success',
+		user: req.session.user
+	})
+})
 
 router.post('/login', function(req, res, next){
 	var formData = req.body
 	controllers.profile
 	.get({email: formData.email})
-	.then(function(profile){
-		res.json({
-			confirmation:'Success',
-			profile: profile
-		})
+	.then(function(profiles){
+		var profile = profiles[0]
+		if(profiles.length === 0){
+			res.json({
+				confirmation:'Failed',
+				message: 'Profile not found..'
+			})
+			return
+		}
+
+		req.session.user = profile.id
+		res.redirect('/profile')
+
 	})	
 	.catch(function(err){
 		res.json({
