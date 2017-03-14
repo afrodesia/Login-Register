@@ -542,12 +542,14 @@ nav ul {
   min-width: 150px;
   border-right: #646464 solid 5px; }
   .profile .profile-pic {
-    padding-top: 3px;
+    padding-top: 4px;
     padding-left: 10px; }
     .profile .profile-pic .profile-bg {
-      width: 40px;
-      height: 40px;
-      background: #fff;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #f2f2f2;
+      border: 5px solid #646464;
       display: inline-block; }
     .profile .profile-pic .profile-bg > img {
       border-radius: 50px; }
@@ -555,10 +557,10 @@ nav ul {
       color: #fff;
       display: inline-block;
       vertical-align: middle;
-      padding: 0px 10px;
+      padding: 0px 10px 0 2px;
       line-height: 20px;
       margin-top: -30px;
-      font-family: 'AvenirMediumOblique';
+      font-family: 'AvenirLT95Black';
       font-size: 12px;
       cursor: pointer; }
       .profile .profile-pic .profile-name :hover {

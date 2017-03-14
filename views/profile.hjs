@@ -48,7 +48,7 @@
            <li class="nav-link profile">
             <div class="profile-pic">
 				<span class="profile-bg">
-					<img src="https://api.adorable.io/avatars/40/mad.png">
+					
 				</span>
 				<span class="profile-name">Hello, {{ username }}</span>
 			</div>
