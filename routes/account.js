@@ -49,15 +49,22 @@ router.get('/currentuser', function(req, res, next){
 			})
 			return
 		}
-		res.json({
-			confirmation: 'Success',
-			token: decode
+		controllers.profile
+		.getById(decode.id)
+		.then(function(profile){
+			res.json({
+				confirmation: 'Success',
+				user: profile
+			})
 		})
+		.catch(function(err){
+			res.json({
+				confirmation: 'Failed',
+				message: err
+			})
+		})
+		
 	})
-	// res.json({
-	// 	confirmation: 'Success',
-	// 	user: req.session.user
-	// })
 })
 
 router.post('/login', function(req, res, next){
