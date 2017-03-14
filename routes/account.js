@@ -9,12 +9,21 @@ router.post('/register', function(req, res, next){
 	controllers.profile
 	.post(formData)
 	.then(function(profile){
+		req.session.token = jwt.sign({id: profile.id}, '1234', {expiresIn:4000})
 		res.redirect('/profile')
 		return
 	})	
 	.catch(function(err){
 		next(err)
 	})
+})
+router.get('/logout', function(req, res, next){
+	req.session.reset()
+	res.json({
+		confirmation: 'Success',
+		user: null
+	})
+	return
 })
 
 router.get('/currentuser', function(req, res, next){
