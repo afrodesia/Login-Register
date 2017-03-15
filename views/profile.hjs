@@ -76,6 +76,19 @@
 			<div class="column column--1-of-2">
 				<div class="box">
 					<h3>Comments</h3>
+						<ul class="comments">
+							<li>
+								<div class="comment">
+									<h4 class="username">{{ username }}username</h4>
+									<p>
+										{{ comment }}
+
+										test content goes here in this box area to add more content to see if this works. I think I added enought text to test the timestamp.
+									</p>
+									<span>2:20pm</span>
+								</div>
+							</li>
+						</ul>
 				</div>
 			</div>
 			<div class="column column--1-of-2">
