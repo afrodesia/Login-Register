@@ -80,15 +80,11 @@
 			</div>
 			<div class="column column--1-of-2">
 				<div class="box">
-					<form action="/api/comment" method="post" class="Form">
-   							
-   							<input type="text" name="profile" placeholder="Profile ID" />
-   							<textarea type="text" name="text">
-							</textarea>  
-   							<input type="submit" name="submit" placeholder="Submit Comment" />
-   								
-   							
-   						</form>
+					<form action="/account/comment" method="post" class="Form">		<input type="text" name="profile" placeholder="Profile ID" />
+   						<textarea type="text" name="text">
+						</textarea>  
+   						<input type="submit" name="submit" placeholder="Submit Comment" />
+   					</form>
 				</div>
 			</div>
 			<div class="column column--1-of-4">
