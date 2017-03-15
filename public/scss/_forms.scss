@@ -6,8 +6,8 @@
 		font-size: 18px;
 	}
 	textarea{
-		border: 1px solid #ccc;
-		background:transparent;
+		border: 1px solid tomato;
+		background:#f2f2f2;
 		min-height: 150px;
 		width: 100%;
 		padding:0px;
@@ -15,6 +15,7 @@
 		padding:10px;
 		font-size: 16px;
 		color:#333;
+		outline: 0px;
 		margin-bottom: 20px;
 	}
 	input,
@@ -38,9 +39,11 @@
 	button[type="submit"],
 	a[type="submit"],
 	input[type="submit"]{
-		background:coral;
+		background:tomato;
 		border:0px;
-		border-right:3px solid #ccc;
+		height: 50px;
+		border-right:5px solid #646464;
+		border-bottom:2px solid #646464;
 		padding:15px 30px;
 		font-size: 12px;
 		font-family: 'AvenirLT95Black';
@@ -52,10 +55,11 @@
 		display: inline-block;
 		max-width: 130px;
 		margin-bottom: 5px;
+		color:#fff;
 
 		&:hover{
-			background:#ccc;
-			border-right:3px solid #fff;
+			background:coral;
+			border-right:3px solid tomato;
 		}
 	}
 	// Range slider

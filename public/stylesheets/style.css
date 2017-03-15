@@ -441,8 +441,8 @@ h3 {
   font-size: 18px; }
 
 .Form textarea {
-  border: 1px solid #ccc;
-  background: transparent;
+  border: 1px solid tomato;
+  background: #f2f2f2;
   min-height: 150px;
   width: 100%;
   padding: 0px;
@@ -450,6 +450,7 @@ h3 {
   padding: 10px;
   font-size: 16px;
   color: #333;
+  outline: 0px;
   margin-bottom: 20px; }
 
 .Form input,
@@ -473,9 +474,11 @@ h3 {
 .Form button[type="submit"],
 .Form a[type="submit"],
 .Form input[type="submit"] {
-  background: coral;
+  background: tomato;
   border: 0px;
-  border-right: 3px solid #ccc;
+  height: 50px;
+  border-right: 5px solid #646464;
+  border-bottom: 2px solid #646464;
   padding: 15px 30px;
   font-size: 12px;
   font-family: 'AvenirLT95Black';
@@ -486,12 +489,13 @@ h3 {
   border-radius: 6px;
   display: inline-block;
   max-width: 130px;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  color: #fff; }
   .Form button[type="submit"]:hover,
   .Form a[type="submit"]:hover,
   .Form input[type="submit"]:hover {
-    background: #ccc;
-    border-right: 3px solid #fff; }
+    background: coral;
+    border-right: 3px solid tomato; }
 
 .Form output {
   display: block; }
