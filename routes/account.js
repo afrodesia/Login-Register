@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var controllers = require('../controllers')
+var Promise =  require('bluebird')
 var bcrypt = require('bcryptjs')
 var jwt = require('jsonwebtoken')
 

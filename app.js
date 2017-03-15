@@ -38,7 +38,7 @@ app.use(cookieParser());
 app.use(sessions({
   cookieName:'session',
   duration:24*60*60*1000,
-  secret: 'mikagokuzorion6',
+  secret: process.env.SESSION_SECRET,
   activeDuration: 24*60*1000
 }))
 app.use(express.static(path.join(__dirname, 'public')));

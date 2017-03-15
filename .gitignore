@@ -1,7 +1,7 @@
 .sass-cache/
 *.css.map
 .DS_Store
-
+.env
 # Dependency directories
 node_modules
 
