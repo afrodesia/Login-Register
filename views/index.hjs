@@ -55,7 +55,7 @@
   	<div class="container">
 		
 		<div class="row">
-			<div class="column column--1-of-2 column--am">
+			<div class="column column--2-of-3 column--am">
 				<div class="box hard-grey">
 					<h1>Join Now!</h1>
 					<p>We start building out the actual UI components to support a search bar and results page. The search component, called Nav.js will include a text field where the user enters a zip code. The results component, called Venues.js will render the actual search results from the Foursquare API.</p>

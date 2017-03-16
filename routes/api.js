@@ -44,7 +44,7 @@ router.get('/:resource', function(req, res, next){
 		return
 	}
 	controller
-	.get(null)
+	.get(req.query)
 	.then(function(results){
 		res.json({
 			confirmation: 'Success',

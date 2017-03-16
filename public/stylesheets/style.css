@@ -434,6 +434,11 @@ h3 {
   color: tomato;
   font-family: 'AvenirLT95Black'; }
 
+.hard-grey .Form {
+  margin-top: 20px;
+  background: coral;
+  padding: 20px; }
+
 .Form h3 {
   border-bottom: 1px solid tomato;
   margin-bottom: 20px;
