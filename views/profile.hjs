@@ -79,7 +79,7 @@
 						<ul class="comments">
 							<li>
 								<div class="comment">
-									<h4 class="username">{{ username }}username</h4>
+									<h4 class="username">{{ username }}</h4>
 									<p>
 										{{ comment }}
 
