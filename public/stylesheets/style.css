@@ -601,6 +601,7 @@ nav ul li .nav-item:active {
   position: absolute;
   /*this positions the drop menu below the parent element, instead of alongside it*/
   top: 48px;
+  display: block;
   float: none;
   z-index: 99;
   width: 320px;
@@ -661,12 +662,116 @@ nav ul li .nav-item:active {
     /*this positions the drop menu below the parent element, instead of alongside it*/
     top: 50px;
     float: none;
+    display: block;
     z-index: 99;
     width: 320px;
     margin-left: -100px;
     overflow: hidden;
     /* just in case any content is larger than the space*/
     background-color: #dbdbdb; } }
+
+/*----------------------*/
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  float: right; }
+
+nav li {
+  float: left; }
+
+nav #login-trigger,
+nav #signup a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  height: 50px;
+  line-height: 25px;
+  font-weight: bold;
+  padding: 10px 8px; }
+
+nav #signup a {
+  -moz-border-radius: 0 3px 3px 0;
+  -webkit-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0; }
+
+nav #login-trigger {
+  -moz-border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px; }
+
+nav #login-content {
+  display: none;
+  position: absolute;
+  top: 51px;
+  right: 0;
+  z-index: 999;
+  background-color: #f2f2f2;
+  padding: 30px; }
+
+nav li #login-content {
+  right: 0;
+  width: 320px; }
+
+/*--------------------*/
+#inputs input {
+  padding: 6px 5px;
+  margin: 0 0 5px 0;
+  width: 238px;
+  border: 1px solid #222222;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 1px 1px #efefef inset;
+  -webkit-box-shadow: 0 1px 1px #efefef inset;
+  box-shadow: 0 1px 1px #efefef inset; }
+
+#inputs input:focus {
+  background-color: #fff;
+  outline: none;
+  -moz-box-shadow: 0 0 0 1px #efefef inset;
+  -webkit-box-shadow: 0 0 0 1px #efefef inset;
+  box-shadow: 0 0 0 1px #efefef inset; }
+
+/*--------------------*/
+#login #actions {
+  margin: 10px 0 0 0; }
+
+#login #submit {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  border: 1px solid #222222;
+  float: left;
+  height: 30px;
+  padding: 0;
+  width: 100px;
+  cursor: pointer;
+  font: bold 14px Arial, Helvetica;
+  color: #efefef; }
+
+#login #submit:active {
+  outline: none;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset; }
+
+#login #submit::-moz-focus-inner {
+  border: none; }
+
+#login label {
+  float: right;
+  line-height: 30px; }
+
+#login label input {
+  position: relative;
+  top: 2px;
+  right: 2px; }
 
 .comments {
   padding-left: 5px; }

@@ -54,7 +54,6 @@ nav ul {
       }
     }
   }
-  
 }
 
 nav ul li a {
@@ -81,6 +80,7 @@ nav ul li .nav-item:active {
 .nav-content {
    position: absolute; /*this positions the drop menu below the parent element, instead of alongside it*/
    top: 48px;
+   display: block;
    float: none;
    z-index: 99;
    width:320px;
@@ -150,6 +150,7 @@ nav ul li .nav-item:active {
      position: absolute; /*this positions the drop menu below the parent element, instead of alongside it*/
      top: 50px;
      float: none;
+     display: block;
      z-index: 99;
      width:320px;
       margin-left:-100px;
