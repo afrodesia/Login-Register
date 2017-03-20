@@ -600,14 +600,18 @@ nav ul li .nav-item:active {
 .nav-content {
   position: absolute;
   /*this positions the drop menu below the parent element, instead of alongside it*/
-  top: 50px;
+  top: 48px;
   float: none;
   z-index: 99;
   width: 320px;
-  margin-left: -194px;
+  margin-left: -192px;
   overflow: hidden;
   /* just in case any content is larger than the space*/
   background-color: #dbdbdb;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-top: 0;
   max-height: 0;
   /*this vanishes the dropdown menus until the user clicks*/ }
 
