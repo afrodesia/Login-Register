@@ -701,13 +701,26 @@ nav #login-trigger {
   -webkit-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px; }
 
+nav #login-trigger:hover,
+nav #login .active,
+nav #signup a:hover {
+  background-color: #dbdbdb;
+  border-top: 3px solid tomato; }
+
 nav #login-content {
   display: none;
   position: absolute;
-  top: 51px;
+  top: 50px;
   right: 0;
   z-index: 999;
-  background-color: #f2f2f2;
+  background-color: #dbdbdb;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 0px 0px 10px 10px;
+  -webkit-transition: max-height 0.1s ease-in;
+  -moz-transition: max-height 0.1s ease-in;
+  transition: max-height 0.1s ease-in;
   padding: 30px; }
 
 nav li #login-content {
@@ -715,18 +728,6 @@ nav li #login-content {
   width: 320px; }
 
 /*--------------------*/
-#inputs input {
-  padding: 6px 5px;
-  margin: 0 0 5px 0;
-  width: 238px;
-  border: 1px solid #222222;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -moz-box-shadow: 0 1px 1px #efefef inset;
-  -webkit-box-shadow: 0 1px 1px #efefef inset;
-  box-shadow: 0 1px 1px #efefef inset; }
-
 #inputs input:focus {
   background-color: #fff;
   outline: none;
