@@ -23,28 +23,7 @@
 			</div>
 			  <nav class="nav-main">
          <ul>
-            
-            <!--About Us-->
-        <!--  <li class="nav-link">
-            <a href="#" class="nav-item">Login</a>
-              <div class="nav-content">  -->
-                <!--adding this div allows us to give a max height of 0 which means the element won't be shown until user mouse click--> 
-                <!-- 	<div class="nav-sub">
-   						<form action="/api/profile" method="post" class="Form">
-   							<input type="text" name="email" placeholder="Email" />
-   							<input type="password" name="password" placeholder="Password" />
-   							<input type="submit" name="submit" placeholder="Submit" />
-   						</form>
-               		 </div>
-                </div>
-          </li> -->
-               
-            <!--Raw Bones & Meat-->
-        <!--  <li class="nav-link">
-            <a href="#" class="nav-item">Profile</a>
-
-    
-          </li> -->
+      
            <li class="nav-link profile">
             <div class="profile-pic">
 				<span class="profile-bg">
