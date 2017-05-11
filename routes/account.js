@@ -1,12 +1,12 @@
-var express = require('express');
-var router = express.Router();
-var controllers = require('../controllers')
-var Promise =  require('bluebird')
-var bcrypt = require('bcryptjs')
-var jwt = require('jsonwebtoken')
+const express = require('express');
+const router = express.Router();
+const controllers = require('../controllers')
+const Promise =  require('bluebird')
+const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 
 router.post('/register', function(req, res, next){
-	var formData = req.body
+	const formData = req.body
 	controllers.profile
 	.post(formData)
 	.then(function(profile){
@@ -69,7 +69,7 @@ router.get('/currentuser', function(req, res, next){
 })
 
 router.post('/login', function(req, res, next){
-	var formData = req.body
+	const formData = req.body
 	controllers.profile
 	.get({email: formData.email}, true)
 	.then(function(profiles){
@@ -81,9 +81,9 @@ router.post('/login', function(req, res, next){
 			})
 			return
 		}
-		var profile = profiles[0]
+		const profile = profiles[0]
 
-		var passwordCorrect = bcrypt.compareSync(formData.password, profile.password)
+		const passwordCorrect = bcrypt.compareSync(formData.password, profile.password)
 		if(passwordCorrect === false){
 			req.session.reset()
 			res.json({
@@ -114,7 +114,7 @@ router.post('/comment', function(req, res, next){
 		})
 		return
 	}
-	var token = req.session.token
+	const token = req.session.token
 	jwt.verify(token, process.env.TOKEN_SECRET, function(err, decode){
 		if(err){
 			res.json({
@@ -124,7 +124,7 @@ router.post('/comment', function(req, res, next){
 			return
 		}
 		// Success
-		var commentData = req.body
+		const commentData = req.body
 
 		commentData['profile'] = decode.id
 		controllers.comment

@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var controllers = require('../controllers')
-var jwt = require('jsonwebtoken')
+const express = require('express');
+const router = express.Router();
+const controllers = require('../controllers')
+const jwt = require('jsonwebtoken')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

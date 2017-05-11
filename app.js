@@ -1,14 +1,14 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var sessions = require('client-sessions');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const sessions = require('client-sessions');
 require('dotenv').config()
 
-var dbUrl = 'mongodb://localhost/profile-signup'
+const dbUrl = 'mongodb://localhost/profile-signup'
 mongoose.connect(dbUrl, function(err, res){
   if(err){
     console.log('DB CONNECTION FAILED')
@@ -19,11 +19,11 @@ mongoose.connect(dbUrl, function(err, res){
 })
 
 
-var routes = require('./routes/index');
-var account = require('./routes/account');
-var api = require('./routes/api');
+const routes = require('./routes/index');
+const account = require('./routes/account');
+const api = require('./routes/api');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -51,7 +51,7 @@ app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });

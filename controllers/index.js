@@ -1,5 +1,5 @@
-var ProfileController = require('./profileCtrl')
-var CommentController = require('./commentCtrl')
+const ProfileController = require('./profileCtrl')
+const CommentController = require('./commentCtrl')
 
 module.exports = {
 	profile: ProfileController,

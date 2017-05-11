@@ -1,5 +1,5 @@
-var mongoose = require('mongoose')
-var ProfileSchema = new mongoose.Schema({
+const mongoose = require('mongoose')
+const ProfileSchema = new mongoose.Schema({
 	email:{type:String, default:''},
 	username: {type:String, default:''},
 	password: {type:String, default:''},
@@ -7,7 +7,7 @@ var ProfileSchema = new mongoose.Schema({
 })
 
 ProfileSchema.methods.summary = function(){
-	var summary = {
+	const summary = {
 		id: this._id.toString(),
 		email: this.email,
 		username: this.username,

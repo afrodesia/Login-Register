@@ -1,11 +1,11 @@
-var express = require('express')
-var router = express.Router()
+const express = require('express')
+const router = express.Router()
 
-var controllers = require('../controllers')
+const controllers = require('../controllers')
 
 router.post('/:resource', function(req, res, next){
-	var resource = req.params.resource
-	var controller = controllers[resource]
+	const resource = req.params.resource
+	const controller = controllers[resource]
 
 	if(controller === null){
 		res.json({
@@ -14,7 +14,7 @@ router.post('/:resource', function(req, res, next){
 		})
 		return
 	}
-	var formData = req.body
+	const formData = req.body
 
 	controller
 	.post(formData)
@@ -33,8 +33,8 @@ router.post('/:resource', function(req, res, next){
 })
 
 router.get('/:resource', function(req, res, next){
-	var resource = req.params.resource
-	var controller = controllers[resource]
+	const resource = req.params.resource
+	const controller = controllers[resource]
 
 	if (controller === null){
 		res.json({
@@ -61,8 +61,8 @@ router.get('/:resource', function(req, res, next){
 
 
 router.get('/:resource/:id', function(req, res, next ){
-	var resource = req.params.resource
-	var controller = controllers[resource]
+	const resource = req.params.resource
+	const controller = controllers[resource]
 
 	if (controller === null){
 		res.json({
@@ -71,7 +71,7 @@ router.get('/:resource/:id', function(req, res, next ){
 		})
 		return
 	}
-	var id = req.params.id
+	const id = req.params.id
 	controller
 	.getById(id)
 	.then(function(result){

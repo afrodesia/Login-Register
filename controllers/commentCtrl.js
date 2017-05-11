@@ -1,5 +1,5 @@
-var Comment = require('../models/Comment')
-var Promise =  require('bluebird')
+const Comment = require('../models/Comment')
+const Promise =  require('bluebird')
 
 module.exports = {
 	get: function(params){
@@ -10,7 +10,7 @@ module.exports = {
 					reject(err)
 					return
 				}
-				var results = []
+				const results = []
 				comments.forEach(function(comment, i){
 					results.push(comment.summary())
 				})
